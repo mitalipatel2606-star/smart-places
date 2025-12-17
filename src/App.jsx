@@ -85,7 +85,7 @@ function App() {
         const query = CATEGORY_TO_QUERY[category];
 
         const res = await fetch(
-          `http://localhost:3001/places?query=${query}&lat=${location.lat}&lng=${location.lng}&limit=30`
+          `https://smart-places-backend.onrender.com/places?query=${query}&lat=${location.lat}&lng=${location.lng}&limit=30`
         );
 
         if (!res.ok) throw new Error("Failed to fetch places");
